@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset='utf-8'>
+    <title>Gerador de layers</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' href='css/reset.css'>
+    <link rel='stylesheet' href='css/site.css'>
+    <link rel='stylesheet' href='css/header.css'>
+    <link rel='stylesheet' href='css/button.css'>
+    <link rel="stylesheet" href="css/form.css">
+    <link rel='stylesheet' href='css/timeline.css'>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <h1 class="header_title">Gerador de elementos HTML com controle de criação e destruição.</h1>
+    </header>
+
+    
+    <main>
+        <form class="formulario" onsubmit="layersController.add(event)">
+            <fieldset>
+                <legend class="formulario_titulo">Adicionar nova layer</legend>
+                <label for="name">Nome:</label>
+                <input type="text" name="name" id="name" required autofocus>
+            </fieldset>
+            <button class="button">Adicionar</button>
+        </form>
+        <section id="timeline"></section>
+    </main>
+
+    <script src='controllers/LayersController.js'></script>
+    <script src='models/LayersList.js'></script>
+    <script src='models/Layer.js'></script>
+    <script src='views/LayersView.js'></script>
+    <script>
+        const layersController = new LayersController();
+    </script>
+
+</body>
+</html>

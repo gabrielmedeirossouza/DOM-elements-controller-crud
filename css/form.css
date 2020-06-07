@@ -1,0 +1,12 @@
+form {
+    width: 400px;
+    display: flex;
+    padding: 20px;
+    margin: 40px auto 40px auto;
+    border: 3px dashed #606060;
+}
+
+form fieldset {
+    text-align: justify;
+    margin-right: 20px;
+}
